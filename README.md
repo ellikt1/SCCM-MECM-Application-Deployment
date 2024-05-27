@@ -9,15 +9,38 @@ Project showcases how System Center Configuration Manager (SCCM), also known as 
 
 <h2>Environment Used</h2>
 <p>
-The lab environment is comprised of three virtual machines: DC01 (Domain Controller 1), GW01 (Gateway 1), and CM01 (Configuration Manager 1). DC01, equipped with 1 processor (2 cores), 2GB of memory, and 100GB of storage, operates within the LAN segment "CM Lab" and functions as the domain controller. GW01, featuring similar specifications to DC01, serves as the gateway, facilitating Wi-Fi connections to DC01 via Routing and Remote Access. DC01, in turn, employs DHCP to allocate IP addresses, enabling CM01's internet connectivity. CM01, with 1 processor (8 cores), 16GB of memory, and varying storage capacities, operates within the same LAN segment and relies on DC01 for internet access. This setup is designed to demonstrate network infrastructure configurations and management using virtualization technology.
+The lab environment consists of three virtual machines: DC01 (Domain Controller), GW01 (Gateway), and CM01 (Configuration Manager).
  <br />
 </p>
 
-<p> 
-   CM01 is the focal point, boasting a robust configuration that includes WSUS (Windows Server Update Services), SQL Server 2022, SQL Server Management Studio, and Configuration Management version 2403. WSUS enables centralized management of Windows updates across the network, ensuring timely deployment and compliance with security patches and feature upgrades. With SQL Server 2022 and SQL Server Management Studio in place, CM01 serves as a powerful database management platform, facilitating data storage, retrieval, and manipulation with advanced SQL functionalities. Additionally, Configuration Management version 2403 enhances the system's capability to streamline configuration tasks, automate software deployment, and enforce compliance standards.
+<b>DC01:</b>
+- 1 processor (2 cores)
+- 2GB of memory
+- 100GB of storage
+- Operates within the "CM Lab" LAN segment as the domain controller.
+
+<b>GW01:</b>
+- Similar specifications to DC01
+- Serves as the gateway, enabling Wi-Fi connections to DC01 via Routing and Remote Access
+- Has 2 network adapters: one configured for NAT and the other operating in the "CM Lab" LAN segment.
+
+<b>CM01:</b>
+- 1 processor (8 cores) 
+- 16GB of memory
+- Varying storage capacities totaling to 700GB of storage
+- Operates within the "CM Lab" LAN segment and relies on DC01 for internet access.
+- DC01 uses DHCP to allocate IP addresses, allowing CM01 to connect to the internet. This setup demonstrates network infrastructure configurations and management using virtualization technology.
 <br />
+
+<p> 
+CM01 is the focal point of the lab environment, featuring a robust configuration that includes WSUS (Windows Server Update Services), SQL Server 2022, SQL Server Management Studio, and Configuration Manager version 2403.
 <br />
 </p>
+
+- <b>WSUS:</b> Manages Windows updates across the network, ensuring timely deployment and compliance with security patches and feature upgrades.
+- <b>SQL Server 2022 and SQL Server Management Studio:</b> Provide a powerful database management platform, facilitating advanced data storage, retrieval, and manipulation 
+- <b>Configuration Manager version 2403:</b> Enhances system capabilities by streamlining configuration tasks, automating software deployment, and enforcing compliance standards.
+<br />
 
 
 <h2>Environment Topology</h2>
